@@ -3,6 +3,7 @@ import {FiMenu} from 'react-icons/fi'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import logo from '../../Images/lexologo.png'
 import $ from 'jquery';
+import { useHistory } from 'react-router-dom';
 const Menu = () => {
     const [show1, setShow] = useState('none');
     const showMenu = () =>{
@@ -13,6 +14,10 @@ const Menu = () => {
     }else{
         setShow("none");
     }
+}
+const history = useHistory();
+const adminpage = () =>{
+    history.push('/loginform')
 }
 
 $(window).scroll(function(e){ 
@@ -44,7 +49,7 @@ $(window).scroll(function(e){
                                 <li>Home</li>
                                 <li>About us</li>
                                 <li>Services</li>
-                                <li>Management</li>
+                                <li onClick={adminpage}>Management</li>
                             </ul>
                         </div>
                 </div>
@@ -58,7 +63,7 @@ $(window).scroll(function(e){
                    <li>Home</li>
                    <li>About us</li>
                    <li>Services</li>
-                   <li>Management</li>
+                   <li onClick={adminpage}>Management</li>
                 </ul>
             </div>
         </div>

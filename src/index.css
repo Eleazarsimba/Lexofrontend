@@ -167,6 +167,7 @@ code {
 @media only screen and (max-width: 780px) { 
   .menu2{
     width: 100%;
+    margin-top: 1px;
   }
   .menu2 ul{
     background-color: #1F2437;
@@ -187,7 +188,15 @@ code {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  height: 50%;
+  /* height: 50%; */
+}
+@media only screen and (max-width: 640px) { 
+  .carouselpage{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+  } 
 }
 @media only screen and (max-width: 640px) { 
   .myfooter1 h6{ 
@@ -228,4 +237,47 @@ code {
 }
 #retak{
   font-family: "Times New Roman", Times, serif;
+  padding: 40px;
+  font-size: 24px;
+}
+#loader1{
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* management login form css */
+.loginform{
+  width: 400px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border: 1px solid rgb(124, 124, 133);
+  border-radius: 10px;
+}.loginform h5{
+  font-family: Impact;
+  font-size: 25px;
+}
+.loginform p{
+  font-size: 10px;
+}
+.profheader{
+  background-color:#C0C0C0;
+  border-radius: 5px;
+  padding: 5px;
+  color: #ffffff;
+}
+/* send to all form */
+.sendtomany{
+  width: 400px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border: 1px solid rgb(124, 124, 133);
+  border-radius: 10px;
+}
+.sendtomany h4{
+  font-family: Impact;
+  font-size: 25px;
 }
