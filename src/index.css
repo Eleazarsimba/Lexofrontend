@@ -281,3 +281,14 @@ code {
   font-family: Impact;
   font-size: 25px;
 }
+.dashboardinfo{
+  display: flex;
+}
+.updateprofile{
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
+}
+.updatebtn{
+  padding-left: 50px;
+}

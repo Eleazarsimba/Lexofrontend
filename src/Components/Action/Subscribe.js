@@ -4,9 +4,9 @@ import { useHistory } from 'react-router-dom';
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-const Subscribe = () => {
-    const history = useHistory();
-        axios.put(`http://localhost:3001/theuser/verifymail`)
+const Subscribe = async () => {
+        const history = useHistory();
+        await axios.put(`http://localhost:3001/theuser/verifymail`)
         .then(function (response) {
             document.getElementById('retak').innerHTML= '<p>Thanks for subscribing to Lexo, you will be redirected to Lexo homepage</p>'
             document.getElementById('loader1')

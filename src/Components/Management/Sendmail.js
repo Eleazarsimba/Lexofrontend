@@ -7,7 +7,7 @@ import axios from 'axios';
 const Sendmail = () => {
     const [data, setData] = useState({
         subject: "",
-        html: "",
+        html: ""
     })
     
     const handleChange = (e) =>{
@@ -16,9 +16,9 @@ const Sendmail = () => {
         setData(newdata)
         console.log(newdata)
     }
-    const sendToall = (e) =>{
+    const sendToall = async (e) =>{
     e.preventDefault()
-    axios.post('http://localhost:3001/theuser/textmail',{
+    await axios.post('http://localhost:3001/theuser/textmail',{
         subject: data.subject,
         html: data.html
         

@@ -35,7 +35,8 @@ const Loginform = () => {
         // handle success
         console.log(response.data);
         window.localStorage.setItem('token', response.data.token);
-        history.push("/sendtoall");
+        window.localStorage.setItem('email', response.data.email);
+        history.push("/dashboard");
     })
     .catch(function (error) {
         // handle error

@@ -3,8 +3,8 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Subscribe from "./Components/Action/Subscribe";
 import Home from "./Components/Dashboard/Home";
 import Locationmap from './Components/Dashboard/Locationmap';
+import Dashboard from "./Components/Management/Dashboard";
 import Loginform from "./Components/Management/Loginform";
-import Sendmail from "./Components/Management/Sendmail";
 import PageNotFound from "./PageNotFound";
 function App() {
   return (
@@ -14,7 +14,8 @@ function App() {
             <Route exact path="/subscribe/:email" component={Subscribe} />
             <Route exact path="/map" component={Locationmap} />
             <Route exact path="/loginform" component={Loginform} />
-            <Route exact path="/sendtoall" component={Sendmail} />
+            <Route exact path="/dashboard" component={Dashboard} />
+            
             <Route path="*" component={PageNotFound} />
         </Switch>
     </Router>

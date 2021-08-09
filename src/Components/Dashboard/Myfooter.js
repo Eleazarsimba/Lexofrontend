@@ -15,9 +15,9 @@ const Myfooter = () => {
         newdata[e.target.id] = e.target.value
         setData(newdata)
     }
-    const subScribe = (e) =>{
+    const subScribe = async (e) =>{
     e.preventDefault()
-    axios.post('http://localhost:3001/theuser/register',{
+    await axios.post('http://localhost:3001/theuser/register',{
         //set new values
         email: data.email,  
     })
@@ -43,7 +43,7 @@ const Myfooter = () => {
                     alt="First slide"
                     />
                     <Form onSubmit={subScribe}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label><p>Subscribe our newsletter to get latest news update</p></Form.Label>
                             <Form.Control type="email" placeholder="Enter your email" id="email" onChange={handleChange} required/>
                         </Form.Group>
